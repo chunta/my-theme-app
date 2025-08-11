@@ -3,24 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background-primary: rgba(249, 250, 251, 1); 
+  --background-primary: rgb(70, 139, 209); 
   --background-secondary: rgba(18, 18, 18, 1);
   --text-primary: rgba(55, 65, 81, 1);
-  --text-secondary: rgba(243, 244, 246, 1);
+  --text-secondary: rgb(97, 43, 43);
   --buttons: rgba(250, 204, 21, 1);
-  --border-color: rgba(209, 213, 219, 1);
+  --border-color: rgb(143, 23, 23);
 }
 
 .dark {
-  --background-primary: rgb(226, 15, 15);
+  --background-primary: rgb(255, 12, 73);
   --background-secondary: rgba(249, 250, 251, 1);
   --text-primary: rgba(243, 244, 246, 1);
   --text-secondary: rgba(55, 65, 81, 1);
 }
 
 
+.test {
+  color: var(--text-secondary);
+}
+
 body {
-  /*background-color: var(--background-primary) !important;*/
-  color: var(--text-primary) !important;
+  color: var(--background-primary) !important;
   transition: background-color 0.3s, color 0.3s;
 }
