@@ -1,29 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 引入 TailwindCSS v4 的全部功能 (等於以前的 @tailwind base/components/utilities) */
+@import "tailwindcss";
 
+/* 定義全域 CSS 變數 (預設主題顏色) */
 :root {
-  --background-primary: rgb(70, 139, 209); 
-  --background-secondary: rgba(18, 18, 18, 1);
-  --text-primary: rgba(55, 65, 81, 1);
-  --text-secondary: rgb(97, 43, 43);
-  --buttons: rgba(250, 204, 21, 1);
-  --border-color: rgb(143, 23, 23);
+  --background-primary: rgb(70, 139, 209);      /* 主要背景色 */
+  --background-secondary: rgba(18, 18, 18, 1);  /* 次要背景色 */
+  --text-primary: rgba(55, 65, 81, 1);          /* 主要文字顏色 */
+  --text-secondary: rgb(97, 43, 43);            /* 次要文字顏色 */
+  --buttons: rgba(250, 204, 21, 1);              /* 按鈕顏色 */
+  --border-color: rgb(143, 23, 23);              /* 邊框顏色 */
 }
 
+/* 暗色模式時覆寫變數 (配合 Tailwind 的 dark class) */
 .dark {
-  --background-primary: rgb(255, 12, 73);
-  --background-secondary: rgba(249, 250, 251, 1);
-  --text-primary: rgba(243, 244, 246, 1);
-  --text-secondary: rgba(55, 65, 81, 1);
+  --background-primary: rgb(255, 12, 73);       /* 暗色模式主要背景 */
+  --background-secondary: rgba(249, 250, 251, 1);/* 暗色模式次要背景 */
+  --text-primary: rgba(243, 244, 246, 1);       /* 暗色模式主要文字顏色 */
+  --text-secondary: rgba(55, 65, 81, 1);        /* 暗色模式次要文字顏色 */
 }
 
-
-.test {
-  color: var(--text-secondary);
-}
-
+/* 設定全域 body 樣式：padding 與背景顏色 */
 body {
-  color: var(--background-primary) !important;
-  transition: background-color 0.3s, color 0.3s;
+  @apply p-12 bg-blue-300; /* 套用 Tailwind 工具類：padding 3rem，背景色紅色系 */
 }
